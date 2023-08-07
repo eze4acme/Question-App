@@ -1,4 +1,4 @@
-export const quizQuestions = [
+const quizQuestions = [
   {
     question: "What is the capital of France?",
     options: ["London", "Berlin", "Paris", "Rome"],
@@ -25,9 +25,5 @@ export const quizQuestions = [
     correctAnswer: "Carbon Dioxide"
   }
 ];
-// utils.js
-const add = (a, b) => a + b;
 
-export default add;
-
-// export default quizQuestions;
+export default quizQuestions 
