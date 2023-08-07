@@ -23,3 +23,18 @@ body{
     border-bottom: solid 2px #333;
     margin-bottom: 20px;
 }
+.quiz h2{
+    color: #14144b;
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+.quiz button{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 8px;
+    text-align: justify;
+    border: none;
+    outline: solid 1px #14144b;
+}
