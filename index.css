@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #14144b;
+}
+.app{
+    background: #fff;
+    width: 90%;
+    max-width: 620px;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 100px auto 0;
+}
