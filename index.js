@@ -42,11 +42,13 @@ function render() {
     answerButtonsEl.innerHTML += `<button class="btn">${option}</button>`
 })
 }
-// window.onloadstart = render()
+
+
+window.onloadstart = render()
 nextBtnEl.addEventListener('click', function () {
     currentIndex++
     render()
 })
 
 
-console.log(quizQuestions);
+// console.log(quizQuestions);
