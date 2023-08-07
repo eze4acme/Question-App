@@ -49,7 +49,7 @@ body{
     background: #222;
     color: #fff;
 }
-#next-btn{
+.next-btn{
     display: block;
     padding: 10px;
     width: 150px;
@@ -62,7 +62,7 @@ body{
     font-weight: 500;
     transition: all 0.3s;
 }
-#next-btn:hover{
+.next-btn:hover{
     background-color: #161666;
     color: #fff;
 }

@@ -27,7 +27,7 @@ const quizQuestions = [
 ];
 
 const questionEl = document.getElementById('question')
-const btnEl = document.getElementById('btn')
+// const btnEl = document.getElementById('btn')
 const answerButtonsEl = document.getElementById('answer-buttons')
 const nextBtnEl = document.getElementById('next-btn')
 
@@ -43,12 +43,25 @@ function render() {
 })
 }
 
+// console.log(quizQuestions.lastIndexOf());
 
-window.onloadstart = render()
+render()
 nextBtnEl.addEventListener('click', function () {
-    currentIndex++
-    render()
+   if (currentIndex < quizQuestions.length - 1) {
+        answerButtonsEl.innerHTML = ''
+        currentIndex++
+        render()
+   }else{
+    questionEl.innerHTML = ''
+    answerButtonsEl.innerHTML = ''
+    questionEl.innerHTML = `You Scored 3 Out Of ${quizQuestions.length}`
+    nextBtnEl.innerText = 'Play Again'
+   }
+   if (currentIndex < quizQuestions.length  && nextBtnEl.textContent == 'Play Again') {
+       nextBtnEl.onclick = render()
+   }
 })
+//    nextBtnEl.onclick = render()
+   // console.log(quizQuestions);
 
 
-// console.log(quizQuestions);
