@@ -27,6 +27,7 @@ const quizQuestions = [
 ];
 
 const questionEl = document.getElementById('question')
+const btnEl = document.getElementById('btn')
 const answerButtonsEl = document.getElementById('answer-buttons')
 const nextBtnEl = document.getElementById('next-btn')
 
@@ -35,5 +36,9 @@ let currentIndex = 0;
 let score = 0;
 
 questionEl.innerHTML =`${currentIndex + 1}. ${quizQuestions[currentIndex].question}`
+// let btn = ''
+quizQuestions[currentIndex].options.map(option => {
+    answerButtonsEl.innerHTML += `<button class="btn">${option}</button>`
+})
 
 console.log(quizQuestions);
