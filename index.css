@@ -11,9 +11,9 @@ body{
 .app{
     background: #fff;
     width: 90%;
-    max-width: 620px;
-    padding: 25px;
-    border-radius: 8px;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
     margin: 100px auto 0;
 }
 .title{
@@ -37,4 +37,15 @@ body{
     text-align: justify;
     border: none;
     outline: solid 1px #14144b;
+}
+.next{
+    display: block;
+    padding: 8px 50px;
+    background: #14144b;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
 }
