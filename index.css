@@ -20,32 +20,49 @@ body{
     color: #14144b;
     font-size: 25px;
     padding: 0 0 15px 0;
-    border-bottom: solid 2px #333;
-    margin-bottom: 20px;
+    border-bottom: solid 1px #333;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 .quiz h2{
     color: #14144b;
-    font-size: 17px;
-    padding-bottom: 10px;
+    font-size: 18px;
+   font-weight: 600;
 }
-
-.quiz button{
+.quiz{
+    padding: 20px 0;
+}
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 15px;
-    padding: 8px;
+    margin:10px 0;
+    padding: 10px;
     text-align: justify;
-    border: none;
-    outline: solid 1px #14144b;
+    border: solid 1px #14144b;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-.next{
+.btn:hover{
+    background: #222;
+    color: #fff;
+}
+#next-btn{
     display: block;
-    padding: 8px 50px;
+    padding: 10px;
+    width: 150px;
     background: #14144b;
     border-radius: 5px;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto 0;
     border: none;
     color: #fff;
-    margin-top: 10px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+#next-btn:hover{
+    background-color: #161666;
+    color: #fff;
 }
