@@ -16,3 +16,10 @@ body{
     border-radius: 8px;
     margin: 100px auto 0;
 }
+.title{
+    color: #14144b;
+    font-size: 25px;
+    padding: 0 0 15px 0;
+    border-bottom: solid 2px #333;
+    margin-bottom: 20px;
+}
