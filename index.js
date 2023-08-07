@@ -35,10 +35,18 @@ const nextBtnEl = document.getElementById('next-btn')
 let currentIndex = 0;
 let score = 0;
 
-questionEl.innerHTML =`${currentIndex + 1}. ${quizQuestions[currentIndex].question}`
-// let btn = ''
-quizQuestions[currentIndex].options.map(option => {
+function render() {
+    questionEl.innerHTML =`${currentIndex + 1}. ${quizQuestions[currentIndex].question}`
+
+    quizQuestions[currentIndex].options.map(option => {
     answerButtonsEl.innerHTML += `<button class="btn">${option}</button>`
 })
+}
+// window.onloadstart = render()
+nextBtnEl.addEventListener('click', function () {
+    currentIndex++
+    render()
+})
+
 
 console.log(quizQuestions);
