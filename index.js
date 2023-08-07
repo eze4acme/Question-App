@@ -26,4 +26,14 @@ const quizQuestions = [
   }
 ];
 
+const questionEl = document.getElementById('question')
+const answerButtonsEl = document.getElementById('answer-buttons')
+const nextBtnEl = document.getElementById('next-btn')
+
+
+let currentIndex = 0;
+let score = 0;
+
+questionEl.innerHTML =`${currentIndex + 1}. ${quizQuestions[currentIndex].question}`
+
 console.log(quizQuestions);
