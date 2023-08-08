@@ -43,10 +43,20 @@ function render() {
     const button = document.createElement('button')
     button.classList.add('btn')
     button.innerHTML = option
-    console.log(button);
     answerButtonsEl.appendChild(button)
+    if (quizQuestions[currentIndex].correctAnswer) {
+        button.dataset.quizQuestions = quizQuestions[currentIndex].correctAnswer;
+    }
+    button.addEventListener('click', selectAnswer)
 })
-// console.log(btnEl);
+}
+
+function selectAnswer(e) {
+    const selectedBtn = e.target.dataset.correctAnswer
+    console.log(e.target.dataset);
+    if (selectedBtn === quizQuestions[currentIndex].correctAnswer) {
+    console.log(score++);
+  }
 }
 
 
