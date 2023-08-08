@@ -44,16 +44,16 @@ function render() {
     button.classList.add('btn')
     button.innerHTML = option
     answerButtonsEl.appendChild(button)
-    if (option.includes(quizQuestions[currentIndex].correctAnswer)) {
-        button.dataset.correctAnswer = quizQuestions[currentIndex].correctAnswer;
+    if (option == quizQuestions[currentIndex].correctAnswer){
+        button.dataset.correctAnswer5 = quizQuestions[currentIndex].correctAnswer;
     }
     button.addEventListener('click', selectAnswer)
 })
 }
 
 function selectAnswer(e) {
-    const selectedBtn = e.target.dataset.correctAnswer
-    console.log(e.target.dataset);
+    const selectedBtn = e.target.dataset.correctAnswer5
+    console.log(selectedBtn);
     if (selectedBtn === quizQuestions[currentIndex].correctAnswer) {
     console.log(score++);
   }
