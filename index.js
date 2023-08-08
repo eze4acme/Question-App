@@ -56,6 +56,7 @@ function selectAnswer(e) {
     const isCorrect = selectedBtn.dataset.answer === quizQuestions[currentIndex].correctAnswer
     if (isCorrect ) {
     selectedBtn.classList.add('correct')
+    console.log(score++);
   }else{
     selectedBtn.classList.add('incorrect')
   }
@@ -77,14 +78,15 @@ nextBtnEl.addEventListener('click', function () {
    }else{
     questionEl.innerHTML = ''
     answerButtonsEl.innerHTML = ''
-    questionEl.innerHTML = `You Scored 3 Out Of ${quizQuestions.length}`
+    questionEl.innerHTML = `You Scored ${score} Out Of ${quizQuestions.length}`
     playBtnEl.style.display = 'block'
     nextBtnEl.style.display = 'none'
 }
-// console.log(btnEl);
+
 })
 playBtnEl.addEventListener('click', function () {
-    currentIndex = 0
+    currentIndex = 0;
+    score = 0
     render()
     nextBtnEl.style.display = 'block'
     playBtnEl.style.display = 'none'
