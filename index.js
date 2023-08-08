@@ -27,7 +27,7 @@ const quizQuestions = [
 ];
 
 const questionEl = document.getElementById('question')
-// const btnEl = document.getElementById('btn')
+const btnEl = document.querySelectorAll('.btn')
 const answerButtonsEl = document.getElementById('answer-buttons')
 const nextBtnEl = document.getElementById('next-btn')
 const playBtnEl = document.getElementById('play-btn')
@@ -40,8 +40,13 @@ function render() {
     questionEl.innerHTML =`${currentIndex + 1}. ${quizQuestions[currentIndex].question}`
 
     quizQuestions[currentIndex].options.map(option => {
-    answerButtonsEl.innerHTML += `<button class="btn">${option}</button>`
+    const button = document.createElement('button')
+    button.classList.add('btn')
+    button.innerHTML = option
+    console.log(button);
+    answerButtonsEl.appendChild(button)
 })
+// console.log(btnEl);
 }
 
 
@@ -58,6 +63,7 @@ nextBtnEl.addEventListener('click', function () {
     playBtnEl.style.display = 'block'
     nextBtnEl.style.display = 'none'
 }
+// console.log(btnEl);
 })
 playBtnEl.addEventListener('click', function () {
     currentIndex = 0
@@ -65,3 +71,5 @@ playBtnEl.addEventListener('click', function () {
     nextBtnEl.style.display = 'block'
     playBtnEl.style.display = 'none'
 })
+
+
