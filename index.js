@@ -45,7 +45,7 @@ function render() {
     button.innerHTML = option
     answerButtonsEl.appendChild(button)
     if (option === quizQuestions[currentIndex].correctAnswer){
-        button.dataset.answer = quizQuestions[currentIndex].correctAnswer;
+        button.dataset.answer = option;
     }
     button.addEventListener('click', selectAnswer)
 })
@@ -59,6 +59,12 @@ function selectAnswer(e) {
   }else{
     selectedBtn.classList.add('incorrect')
   }
+   Array.from(answerButtonsEl.children).map( button => {
+     if(button.dataset.answer) {
+        button.classList.add('correct')
+       };
+      button.disabled = true;
+  })
 }
 
 
