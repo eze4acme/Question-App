@@ -44,8 +44,8 @@ function render() {
     button.classList.add('btn')
     button.innerHTML = option
     answerButtonsEl.appendChild(button)
-    if (quizQuestions[currentIndex].correctAnswer) {
-        button.dataset.quizQuestions = quizQuestions[currentIndex].correctAnswer;
+    if (option.includes(quizQuestions[currentIndex].correctAnswer)) {
+        button.dataset.correctAnswer = quizQuestions[currentIndex].correctAnswer;
     }
     button.addEventListener('click', selectAnswer)
 })
