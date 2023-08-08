@@ -69,3 +69,10 @@ body{
     background-color: #161666;
     color: #fff;
 }
+.correct{
+    background: #9bec9b;
+}
+
+.incorrect{
+    background: #f16161;
+}

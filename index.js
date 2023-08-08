@@ -38,8 +38,8 @@ let score = 0;
 
 function render() {
     questionEl.innerHTML =`${currentIndex + 1}. ${quizQuestions[currentIndex].question}`
-
-    quizQuestions[currentIndex].options.map(option => {
+    const currentQuestion = quizQuestions[currentIndex]
+    currentQuestion.options.map(option => {
     const button = document.createElement('button')
     button.classList.add('btn')
     button.innerHTML = option
